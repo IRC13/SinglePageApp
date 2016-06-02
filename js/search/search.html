@@ -1,0 +1,14 @@
+<h3>Search</h3>
+<div id="input-container">
+	<input type="text" ng-model="filter.name" ng-minlength="2" placeholder="type name">
+</div>
+<div class="content-container">
+	<ul>
+		<li ng-repeat="friend in friends | filter: filter as results">
+			<a ui-sref="details({id:friend.id})">{{friend.name}} ({{calculateAge(friend.birthDate)}})</a>
+		</li>
+		<li ng-if="results.length == 0">
+	      <strong>No results found...</strong>
+	    </li>
+	</ul>
+</div>

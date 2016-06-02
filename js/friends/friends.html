@@ -1,0 +1,8 @@
+<h3>Friends</h3>
+<div class="content-container">
+	<ul>
+		<li ng-repeat="friend in friends">
+			<a ui-sref="details({id:friend.id})">{{friend.name}} ({{calculateAge(friend.birthDate)}})</a>
+		</li>
+	</ul>
+</div>
