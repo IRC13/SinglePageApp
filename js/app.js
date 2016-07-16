@@ -11,7 +11,7 @@
 		])
 
 
-	.config(['$stateProvider', function($stateProvider) {
+	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 		$stateProvider.state('about', {
 			url: '/',
 			controller: 'AboutCtrl',
@@ -29,5 +29,6 @@
 			controller: 'DetailsCtrl',
 			templateUrl: './js/details/details.html'
 		})
+		$urlRouterProvider.otherwise('/');
 	}])
 })();

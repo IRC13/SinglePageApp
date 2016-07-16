@@ -12,7 +12,7 @@
 			api.getFriends().then(function successCallback(response) {
 				$scope.friends = response.data;
 			  }, function errorCallback(response) {
-			  	
+
 			  });
 		}
 
